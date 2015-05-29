@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Pork House - Contact Us</title>
+    <title>Pork House - Home</title>
 
     <jsp:include page="incCss.jsp"/>
 

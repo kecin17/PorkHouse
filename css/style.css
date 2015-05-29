@@ -103,6 +103,10 @@ header .intro-text .skills {
     font-weight: 300;
 }
 
+.navbar-right {
+    padding-right: 30px;
+}
+
 @media(min-width:768px) {
     header .container {
         padding-top: 200px;
@@ -517,7 +521,7 @@ footer .footer-below {
     padding-top: 10px;
     position: absolute;
     width: 80%;
-    left: 1%;
+    left: -5%;
     text-align: center;
     margin: auto;
 }
