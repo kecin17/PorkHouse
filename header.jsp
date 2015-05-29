@@ -1,6 +1,6 @@
 <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
+        <div class="fluid-container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -40,6 +40,9 @@
                     </li>
                     <li>
                         <a href="cart.jsp">Cart (2)</a>
+                    </li>
+                    <li>
+                        <a href="login.jsp">Login</a>
                     </li>
                 </ul>
             </div>
