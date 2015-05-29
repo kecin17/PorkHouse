@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@ include file="../connect.jsp" %>
 <html lang="en">
 
 <head>
@@ -134,6 +135,14 @@
                 <div class="col-lg-5" style="margin-top:4%; right:5%;">
                 <a href="#"> <input type="button" class="btn btn-primary pull-right" value="Add" style="margin-left:5px;"></a>
                 </div>
+<% 
+                    ResultSet resultSet = st.executeQuery("SELECT * FROM ContactUs");
+                            resultSet.next();
+           
+                %>
+
+
+
                 <div class="col-md-12">
                     <div class="table-responsive">
                         <table class="table table-bordered table-hover table-striped">
@@ -148,23 +157,8 @@
                             <tbody>
                                 <tr>
                                     <td class="col-md-1 text-center">1.</td>
-                                    <td class="col-md-6 text-center"> </td>
-                                    <td class="col-md-4 text-center"> </td>
-                                    <td class="col-md-1 text-center">
-                                        <div class="text-center tooltip-demo">
-                                            <a href="#" title="Edit">
-                                                <span class="glyphicon glyphicon-pencil" data-toggle="tooltip" data-placement="top" title="Edit"></span>
-                                            </a>
-                                            <a href="#" title="Delete">
-                                                <span class="glyphicon glyphicon-trash"></span>
-                                            </a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-1 text-center">2.</td>
-                                    <td class="col-md-6 text-center"> </td>
-                                    <td class="col-md-4 text-center"> </td>
+                                    <td class="col-md-6 text-center"> <%=resultSet.getString(2)%></td>
+                                    <td class="col-md-4 text-center">  <%=resultSet.getString(3)%></td>
                                     <td class="col-md-1 text-center">
                                         <div class="text-center tooltip-demo">
                                             <a href="#" title="Edit">
