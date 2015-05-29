@@ -124,10 +124,87 @@
                 </div>
                 <!-- /.sidebar-collapse -->
             </div>
+
             <!-- /.navbar-static-side -->
         </nav>
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-md-7">
+                    <h1 class="page-header">Chef Recommended</h1>
+                </div>
+                <div class="col-lg-5" style="margin-top:4%; right:5%;">
+                <a href="#"> <input type="button" class="btn btn-primary pull-right" value="Add" style="margin-left:5px;"></a>
+                </div>
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover table-striped">
+                            <thead class="text-center">
+                                <tr>
+                                    <th class="col-md-1 text-center">No.<a href="#"><i class="fa fa-caret-down pull-right"></a></th>
+                                    <th class="col-md-3 text-center">Name <a href="#"><i class="fa fa-caret-down pull-right"></a></th>
+                                    <th class="col-md-3 text-center">Price<a href="#"><i class="fa fa-caret-down pull-right"></a></th>
+                                    <th class="col-md-3 text-center">Image <a href="#"><i class="fa fa-caret-down pull-right"></a></th>
+                                    <th class="col-md-1 text-center">Action <a href="#"><i class="fa fa-caret-down pull-right"></a></th>
+                                </tr> 
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="col-md-1 text-center">1.</td>
+                                    <td class="col-md-3 text-center"> </td>
+                                    <td class="col-md-3 text-center"> </td>
+                                    <td class="col-md-3 text-center"> </td>
+                                    <td class="col-md-1 text-center">
+                                        <div class="text-center tooltip-demo">
+                                            <a href="#" title="Edit">
+                                                <span class="glyphicon glyphicon-pencil" data-toggle="tooltip" data-placement="top" title="Edit"></span>
+                                            </a>
+                                            <a href="#" title="Delete">
+                                                <span class="glyphicon glyphicon-trash"></span>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-1 text-center">2.</td>
+                                    <td class="col-md-3 text-center"> </td>
+                                    <td class="col-md-3 text-center"> </td>
+                                    <td class="col-md-3 text-center"> </td>
+                                    <td class="col-md-1 text-center">
+                                        <div class="text-center tooltip-demo">
+                                            <a href="#" title="Edit">
+                                                <span class="glyphicon glyphicon-pencil" data-toggle="tooltip" data-placement="top" title="Edit"></span>
+                                            </a>
+                                            <a href="#" title="Delete">
+                                                <span class="glyphicon glyphicon-trash"></span>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-1 text-center">3.</td>
+                                    <td class="col-md-3 text-center"> </td>
+                                    <td class="col-md-3 text-center"> </td>
+                                    <td class="col-md-3 text-center"> </td>
+                                    <td class="col-md-1 text-center">
+                                        <div class="text-center tooltip-demo">
+                                            <a href="#" title="Edit">
+                                                <span class="glyphicon glyphicon-pencil" data-toggle="tooltip" data-placement="top" title="Edit"></span>
+                                            </a>
+                                            <a href="#" title="Delete">
+                                                <span class="glyphicon glyphicon-trash"></span>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>  
+                </div>
+            </div>
+            <!-- /.row -->
+            
+        </div>  
 
-        
         <!-- /#page-wrapper -->
 
     </div>
