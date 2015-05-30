@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@ include file="../connect.jsp" %>
 <html lang="en">
 
 <head>
@@ -132,6 +133,13 @@
                 <div class="col-md-7">
                     <h1 class="page-header">Chef Recommended</h1>
                 </div>
+
+                <% 
+                    ResultSet resultSet = st.executeQuery("SELECT * FROM msproduct WHERE prodchefrec like 'yes' ");
+                        
+                %>
+                
+
                 <div class="col-lg-5" style="margin-top:4%; right:5%;">
                 <a href="#"> <input type="button" class="btn btn-primary pull-right" value="Add" style="margin-left:5px;"></a>
                 </div>
@@ -148,11 +156,16 @@
                                 </tr> 
                             </thead>
                             <tbody>
+
+                                <%
+                                    int num = 1;
+                                    while(resultSet.next()) {
+                                %>
                                 <tr>
-                                    <td class="col-md-1 text-center">1.</td>
-                                    <td class="col-md-3 text-center"> </td>
-                                    <td class="col-md-3 text-center"> </td>
-                                    <td class="col-md-3 text-center"> </td>
+                                    <td><%=num%>.</td>
+                                    <td><%=resultSet.getString(2)%></td>
+                                    <td><%=resultSet.getString(7)%></td>
+                                    <td><img src="../../img/<%=resultSet.getString(6)%>" width="100" height="100"></td>
                                     <td class="col-md-1 text-center">
                                         <div class="text-center tooltip-demo">
                                             <a href="#" title="Edit">
@@ -164,38 +177,13 @@
                                         </div>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td class="col-md-1 text-center">2.</td>
-                                    <td class="col-md-3 text-center"> </td>
-                                    <td class="col-md-3 text-center"> </td>
-                                    <td class="col-md-3 text-center"> </td>
-                                    <td class="col-md-1 text-center">
-                                        <div class="text-center tooltip-demo">
-                                            <a href="#" title="Edit">
-                                                <span class="glyphicon glyphicon-pencil" data-toggle="tooltip" data-placement="top" title="Edit"></span>
-                                            </a>
-                                            <a href="#" title="Delete">
-                                                <span class="glyphicon glyphicon-trash"></span>
-                                            </a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-1 text-center">3.</td>
-                                    <td class="col-md-3 text-center"> </td>
-                                    <td class="col-md-3 text-center"> </td>
-                                    <td class="col-md-3 text-center"> </td>
-                                    <td class="col-md-1 text-center">
-                                        <div class="text-center tooltip-demo">
-                                            <a href="#" title="Edit">
-                                                <span class="glyphicon glyphicon-pencil" data-toggle="tooltip" data-placement="top" title="Edit"></span>
-                                            </a>
-                                            <a href="#" title="Delete">
-                                                <span class="glyphicon glyphicon-trash"></span>
-                                            </a>
-                                        </div>
-                                    </td>
-                                </tr>
+                                <%
+                                        num = num+  1;
+                                    }
+                                %> 
+
+
+
                             </tbody>
                         </table>
                     </div>  

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<jsp:include page="connect.jsp"/>
 <html lang="en">
 
 <head>

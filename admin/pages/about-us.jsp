@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@ include file="../connect.jsp" %>
 <html lang="en">
 
 <head>
@@ -131,6 +132,13 @@
                 <div class="col-md-12">
                     <h1 class="page-header">About Us</h1>
                 </div>
+
+                <% 
+                    ResultSet resultSet = st.executeQuery("SELECT * FROM AboutUs");
+                            resultSet.next();
+           
+                %>
+
                 <div class="col-md-12">
                     <div class="table-responsive">
                         <table class="table table-bordered table-hover table-striped">
@@ -146,7 +154,7 @@
                                 <tr>
                                     <td class="col-md-1 text-center">1.</td>
                                     <td class="col-md-2 text-center">Vision</td>
-                                    <td class="col-md-8 text-center"> </td>
+                                    <td class="col-md-8 text-center"><%=resultSet.getString(3)%></td>
                                     <td class="col-md-1 text-center">
                                         <div class="text-center tooltip-demo">
                                             <a href="#" title="Edit">
@@ -155,10 +163,11 @@
                                         </div>
                                     </td>
                                 </tr>
+                                <%resultSet.next();%>
                                 <tr>
                                     <td class="col-md-1 text-center">2.</td>
                                     <td class="col-md-2 text-center">Mission</td>
-                                    <td class="col-md-8 text-center"> </td>
+                                    <td class="col-md-8 text-center"><%=resultSet.getString(3)%></td>
                                     <td class="col-md-1 text-center">
                                         <div class="text-center tooltip-demo">
                                             <a href="#" title="Edit">
@@ -167,22 +176,26 @@
                                         </div>
                                     </td>
                                 </tr>
+                                
+                                <%resultSet.next();%>
                                 <tr>
                                     <td class="col-md-1 text-center">3.</td>
                                     <td class="col-md-2 text-center">Company Background</td>
-                                    <td class="col-md-8 text-center"> </td>
+                                    <td class="col-md-8 text-center"><%=resultSet.getString(3)%></td>
                                     <td class="col-md-1 text-center">
                                         <div class="text-center tooltip-demo">
                                             <a href="#" title="Edit">
-                                                <span class="glyphicon glyphicon-pencil" data-toggle="tooltip" data-placement="top" title="Edit"></span>
+                                                <span class="glyphicon glyphicon-pencil" data-toggle="tooltip" data-placement="top" title="Edit"></spaxn>
                                             </a>
                                         </div>
                                     </td>
                                 </tr>
+                                
+                                <%resultSet.next();%>
                                 <tr>
                                     <td class="col-md-1 text-center">4.</td>
                                     <td class="col-md-2 text-center">Motto</td>
-                                    <td class="col-md-8 text-center"> </td>
+                                    <td class="col-md-8 text-center"> <%=resultSet.getString(3)%></td>
                                     <td class="col-md-1 text-center">
                                         <div class="text-center tooltip-demo">
                                             <a href="#" title="Edit">

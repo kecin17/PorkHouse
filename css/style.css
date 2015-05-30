@@ -131,6 +131,8 @@ header .intro-text .skills {
     }
 
     .navbar-fixed-top .navbar-brand {
+        padding-left: 25px;
+        padding-top: 15px;
         font-size: 2em;
         -webkit-transition: all .3s;
         -moz-transition: all .3s;
@@ -143,6 +145,8 @@ header .intro-text .skills {
 
     .navbar-fixed-top.navbar-shrink .navbar-brand {
         font-size: 1.5em;
+        padding-left: 50px;
+        padding-top: 20px;
     }
 }
 
