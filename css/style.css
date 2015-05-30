@@ -562,10 +562,6 @@ footer .footer-below {
 
 .btn-cart {
     background-color: #d44115;
-}
-
-.btn-cart {
-    background-color: #d44115;
     color: #fff;
 }
 
@@ -582,4 +578,14 @@ footer .footer-below {
 
 .dropdown-menu li a{
     color: #000;
+}
+
+.button-orange {
+    background-color: #e7681f;
+    color: #fff;
+}
+
+.button-orange:hover {
+    background-color: #d44115;
+    color: #18BC9C;
 }
