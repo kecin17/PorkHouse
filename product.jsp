@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@ include file="../connect.jsp" %>
 <html lang="en">
 
 <head>
@@ -34,135 +35,32 @@
                     <hr class="star-primary">
                 </div>
             </div>
+            <%
+                String sql = "SELECT prodID, prodName, prodDescription, imageProduct,Price FROM MsProduct";
+                ResultSet view = st.executeQuery(sql);
+            %>
             <div class="row">
                 <div class="col-md-12">
-                    <a href="detail-pages.jsp">
-                        <div class="col-sm-4 col-lg-4 col-md-4">
+                    <%
+                        int count = 0;
+                        while(view.next() && count<6) {
+                    %>
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <a href="product.jsp?id=<%=view.getString(1)%>">
                             <div class="thumbnail">
-                                <img src="img/prod/grilled-pork.jpg" alt="">
+                                <img src="img/<%=view.getString(4)%>" alt="">
                                 <div class="caption">
-                                    <h4 class="pull-right">$54.99</h4>
-                                    <h4><a href="#">Grilled Pork</a>
-                                    </h4>
-                                    <p>
-                                    Direct heat grilling can expose food to temperatures often in excess of 260 °C (500 °F). 
-                                    </p>
-                                </div>
-                                <div class="ratings">
-                                    <p class="pull-right">15 reviews</p>
-                                    <p>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                    </p>
+                                    <h4 class="pull-right">Rp. <%=view.getString(5)%></h4>
+                                    <h4><%=view.getString(2)%></h4>
+                                    <p><%=view.getString(3)%></p>
                                 </div>
                             </div>
-                        </div>
-                    </a>
-
-                    <a href="detail-pages.jsp">
-                        <div class="col-sm-4 col-lg-4 col-md-4">
-                            <div class="thumbnail">
-                                <img src="img/prod/nasi-babi.jpg" alt="">
-                                <div class="caption">
-                                    <h4 class="pull-right">$14.99</h4>
-                                    <h4><a href="#">Nasi Babi</a>
-                                    </h4>
-                                    <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                                <div class="ratings">
-                                    <p class="pull-right">12 reviews</p>
-                                    <p>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="detail-pages.jsp">
-                        <div class="col-sm-4 col-lg-4 col-md-4">
-                            <div class="thumbnail">
-                                <img src="img/prod/pork-belly.jpg" alt="">
-                                <div class="caption">
-                                    <h4 class="pull-right">$74.99</h4>
-                                    <h4><a href="#">Pork Belly</a>
-                                    </h4>
-                                    <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                                <div class="ratings">
-                                    <p class="pull-right">31 reviews</p>
-                                    <p>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                        </a>
                     </div>
-                </a>
-
-                <div class="col-md-12">
-                    <a href="detail-pages.jsp">
-                        <div class="col-sm-4 col-lg-4 col-md-4">
-                            <div class="thumbnail">
-                                <img src="img/prod/pork-curry.jpg" alt="">
-                                <div class="caption">
-                                    <h4 class="pull-right">$34.99</h4>
-                                    <h4><a href="#">Pork Curry</a>
-                                    </h4>
-                                    <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                                <div class="ratings">
-                                    <p class="pull-right">6 reviews</p>
-                                    <p>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="detail-pages.jsp">
-                        <div class="col-sm-4 col-lg-4 col-md-4">
-                            <div class="thumbnail">
-                                <img src="img/prod/roast-pork.jpg" alt="">
-                                <div class="caption">
-                                    <h4 class="pull-right">$94.99</h4>
-                                    <h4><a href="#">Roasted Pork</a>
-                                    </h4>
-                                    <p style="font-family: calibri">This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                                <div class="ratings">
-                                    <p class="pull-right">48 reviews</p>
-                                    <p>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                        <span class="glyphicon glyphicon-star"></span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-sm-12">
-                    <a href="top-product.jsp"><span class="pull-right"><h4>See All</h4></span></a>
+                    <%
+                            count = count + 1;
+                        }
+                    %>
                 </div>
             </div>
             <hr>
