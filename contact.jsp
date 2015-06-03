@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@ include file="../connect.jsp" %>
 <html lang="en">
 
 <head>
@@ -34,18 +35,25 @@
                     <hr class="star-primary">
                 </div>
             </div>
+            <% 
+                ResultSet cu = st.executeQuery("SELECT * FROM ContactUs");
+                cu.next();
+            %>  
             <div class="row">
                 <div class="col-md-12">
                     <h3>Our Contact</h3>
                 </div>
                 <div class="col-md-4 text-center">
-                    <i class="glyphicon glyphicon-earphone" style="font-size:2em;"></i><p>08 09 89 89 89 89</p>
+                    <i class="glyphicon glyphicon-earphone" style="font-size:2em;"></i><p><%=cu.getString(3)%></p>
                 </div>
                 <div class="col-md-4 text-center">
-                    <i class="glyphicon glyphicon-envelope" style="font-size:2em;"></i><p>porkhouse@nopork.com</p>
+                    <i class="glyphicon glyphicon-envelope" style="font-size:2em;"></i><p><%=cu.getString(4)%></p>
                 </div>
                 <div class="col-md-4 text-center">
-                    <i class="fa fa-fa1 fa-facebook" style="font-size:2em;"></i><p>Pork House Indonesia</p>
+                    <i class="fa fa-fa1 fa-facebook" style="font-size:2em;"></i>
+                    <a href="<%=cu.getString(6)%>">
+                        <p style="text-decoration:none"><%=cu.getString(5)%></p>
+                    </a>
                 </div>
                 <div class="col-md-12">
                     <h3>Our Location</h3>

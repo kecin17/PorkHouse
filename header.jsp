@@ -39,10 +39,17 @@
                         <a href="contact.jsp">Contact</a>
                     </li>
                     <li>
-                        <a href="cart.jsp">Cart (2)</a>
-                    </li>
-                    <li>
+                        <%
+                            if(session.getAttribute("usernameSession") == null) {
+                        %>
                         <a href="login.jsp">Login</a>
+                        <%
+                            } else {
+                        %>
+                        <a href="cart.jsp">Cart (2)</a>
+                        <%
+                            }
+                        %>
                     </li>
                 </ul>
             </div>
