@@ -136,6 +136,7 @@
                 <% 
                     ResultSet resultSet = st.executeQuery("SELECT * FROM AboutUs");
                             resultSet.next();
+           
                 %>
 
                 <div class="col-md-12">

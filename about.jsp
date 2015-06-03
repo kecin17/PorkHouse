@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<%@ include file="../connect.jsp" %>
+<jsp:include page="connect.jsp"/>
 <html lang="en">
 
 <head>
@@ -39,37 +39,30 @@
                 <div class="col-md-12">
                     <div class="carousel-holder">
                         <div class="col-md-12">
-                        <% 
-                            ResultSet path = st.executeQuery("SELECT imagePath FROM Slider");
-                        %>  
                             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                                 <ol class="carousel-indicators">
-                                <%
-                                    path.last();
-                                    int rowCount = 0;
-                                    rowCount = path.getRow();
-                                    path.first();
-                                %>
-                                <% for(int i=0; i<rowCount; i++) { %>
-                                    <li data-target="#carousel-example-generic" data-slide-to="<%=i%>" class="active"></li>
-                                <% } %>
+                                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
                                 </ol>
                                 <div class="carousel-inner">
-                                    <% 
-                                        int i=0;
-                                        while(path.next()) { 
-                                    %>
-                                    <div class="item
-                                    <%
-                                        if(i==0) out.println(" active");
-                                    %>
-                                    ">
-                                        <img class="slide-image" src="img/<%=path.getString(1)%>" alt="">
+                                    <div class="item active">
+                                        <img class="slide-image" src="img/prod/grilled-pork1.jpg" alt="">
                                     </div>
-                                    <% 
-                                        i = i + 1;
-                                        } 
-                                    %>
+                                    <div class="item">
+                                        <img class="slide-image" src="img/prod/nasi-babi1.jpg" alt="">
+                                    </div>
+                                    <div class="item">
+                                        <img class="slide-image" src="img/prod/pork-belly1.jpg" alt="">
+                                    </div>
+                                    <div class="item">
+                                        <img class="slide-image" src="img/prod/pork-curry1.jpg" alt="">
+                                    </div>
+                                    <div class="item">
+                                        <img class="slide-image" src="img/prod/roast-pork1.jpg" alt="">
+                                    </div>
                                 </div>
                                 <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
                                     <span class="glyphicon glyphicon-chevron-left"></span>
@@ -81,24 +74,9 @@
                         </div>
                     </div>
                 </div>
-
-                <% 
-                    ResultSet aboutus = st.executeQuery("SELECT Content FROM AboutUs");
-                    aboutus.next();
-                %>  
                 <div class="col-md-12" style="padding-top:50px;">
-                    <div class="col-md-6 text-center"><h4>Vision</h4></div>
-                    <div class="col-md-6 text-center"><h4>Mission</h4></div>
-                    <div class="col-md-6 text-center text-muted"><%=aboutus.getString(1)%></div>
-                    <% aboutus.next(); %>
-                    <div class="col-md-6 text-center text-muted"><%=aboutus.getString(1)%></div>
-                    <% aboutus.next(); %>
-
-                    <div class="col-md-12 text-center"><h4>Company Background</h4></div>
-                    <div class="col-md-12 text-center text-muted"><%=aboutus.getString(1)%></div>
-                    <% aboutus.next(); %>
-                    <div class="col-md-12 text-center"><h4>Motto</h4></div>
-                    <div class="col-md-12 text-center text-muted"><%=aboutus.getString(1)%></div>
+                    <p>We are here for the bigest fan of pork</p>
+                    <p> OUR MOTTO : NO PORK AT ALL</p>
                 </div>
             </div>
         </div>

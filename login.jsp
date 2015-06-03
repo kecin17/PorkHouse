@@ -25,7 +25,6 @@
 <body id="page-top" class="index">
     <jsp:include page="header.jsp"/>
     
-
     <!-- Portfolio Grid Section -->
     <section id="#">
         <div class="container">
@@ -39,19 +38,22 @@
                 <div class="col-md-4 col-md-offset-4">
                     <div class="login-panel panel panel-default">
                         <div class="panel-body">
-                            <form action="dologin.jsp" method="post">
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="E-mail" name="email" autofocus>
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control" placeholder="Password" name="password" type="password" value="">
-                                </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input name="remember" type="checkbox" value="Remember Me">Remember Me
-                                    </label>
-                                </div>
-                                <input type="submit" class="btn btn-lg btn-block button-orange" value="Login">
+                            <form role="form">
+                                <fieldset>
+                                    <div class="form-group">
+                                        <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input name="remember" type="checkbox" value="Remember Me">Remember Me
+                                        </label>
+                                    </div>
+                                    <!-- Change this to a button or input when using this as a form -->
+                                    <a href="index.html" class="btn btn-lg btn-block button-orange" style="">Login</a>
+                                </fieldset>
                             </form>
                         </div>
                     </div>
@@ -59,7 +61,7 @@
             </div>
         </div>
     </section>
-    
+
     <jsp:include page="footer.jsp"/>
 
     <jsp:include page="incJs.jsp"/>

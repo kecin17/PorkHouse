@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<%@ include file="../connect.jsp" %>
 <html lang="en">
 
 <head>
@@ -24,14 +23,6 @@
 </head>
 
 <body id="page-top" class="index">
-    <%
-        String prodID = request.getParameter("id");
-    %>
-    <%
-        String sql = "SELECT prodID, prodName, prodDescription, imageProduct,Price FROM MsProduct WHERE prodID=" + prodID + "";
-        ResultSet detail = st.executeQuery(sql);
-        detail.next();
-    %>
     <jsp:include page="header.jsp"/>
     
     <!-- Portfolio Grid Section -->
@@ -40,9 +31,9 @@
             <!-- Portfolio Item Heading -->
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header"><%=detail.getString(2)%>
+                    <h1 class="page-header">Grilled Pork
                         <small>Grilled with Pleasures</small>
-                        <span class="pull-right">Rp <%=detail.getString(5)%>
+                        <span class="pull-right">$54.99
                         <small>/kg</small></span>
                     </h1>
                 </div>
@@ -53,7 +44,7 @@
             <div class="row">
                 <div class="col-md-7">
                     <div class="col-md-12">
-                        <img class="img-responsive" src="img/<%=detail.getString(4)%>" width="750px" height="500px;" alt="">
+                        <img class="img-responsive" src="img/prod/grilled-pork.jpg" width="750px" height="500px;" alt="">
                     </div>
                     <div class="col-md-10 col-md-offset-1">
                         <div class="row">
@@ -93,7 +84,14 @@
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
                     <h4>Description</h4>
-                    <p><%=detail.getString(3)%></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
+                    <h4>Project Details</h4>
+                    <ul>
+                        <li>Lorem Ipsum</li>
+                        <li>Dolor Sit Amet</li>
+                        <li>Consectetur</li>
+                        <li>Adipiscing Elit</li>
+                    </ul>
                 </div>
             </div>
             <!-- /.row -->
